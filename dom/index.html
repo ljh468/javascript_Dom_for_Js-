@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var x = new Number(3);
+    var y = 4;
+    var z;
+    z = 3;
+    // alert(x + y);
+    // alert(typeof z);
+
+    //////////////////// 6 강 ////////////////////
+    var nums = new Array();
+    nums.push(3);
+    nums.push(12);
+    nums.push(56);
+    console.log(nums)
+    var n1 = nums.pop();
+    console.log('n1 : '+n1);
+    console.log(nums)
+
+    var n2 = nums[0];
+    console.log('n2 : ' + n2)
+
+    var nums2 = new Array();
+    nums2[3] = 57;
+    console.log(nums2)
+
+    //////////////////// 7 강 ////////////////////
+    var nums7 = new Array(5);
+    console.log(nums7);
+    var nums77 = new Array(5, 10, 'hello');
+    console.log(nums77);
+    var nums777 = new Array(5, 10, 21, 'hello', new Array(2, 3, 4));
+    console.log(nums777);
+    console.log(nums777[4][0]);
+    console.log('####################');
+    var nums = new Array(2, 3, 'hello', 7)
+    console.log(nums);
+    nums.splice(2, 1, 'hoho');
+    console.log(nums);
+    nums.splice(2, 0, 'hohoho');
+    console.log(nums);
+
+    //////////////////// 8 강 ////////////////////
+    var exam = new Object(); // 해시형 데이터타입
+    exam.kor = 30;
+    exam['kor'] = 20 // 변수로 제어할 수 있음 var key = 'kor';
+    exam.eng = 70;
+    exam.math = 80;
+
+    exam.Kor = 20;
+    console.log(exam.kor + exam.eng);
+
+    //////////////////// 9 강 ////////////////////
+    var n1 = new Boolean(true);
+    var n2 = true;
+    
+    var s1 = new String('hello');
+    var s2 = 'hello';
+
+    var ar1 = new Array();
+    var ar2 = [];
+
+    var ob1 = new Object();
+    var ob2 = {};
+
+    var exam = {'kor':30, 'eng':70, 'math':80};
+    console.log(exam.kor + exam.eng + exam.math);
+    
+    var ar = [3, 4, 5, 6, exam, [7, 8, 9]]
+    console.log(ar)
+    console.log(ar[5][2])
+    console.log(ar[4].math)
+
+    var notices = [{"id":1, "title":"hello json"},
+                    {"id":2, "title":"hi json"},
+                    {"id":3, "title":"json is ..."}];
+    console.log('notices : ' + notices[0].id)
+
+    //////////////////// 10 강 ////////////////////
+    var data = '[ \
+                    {"co":0.6, "title":"hello json"}, \
+                    {"co":0.7, "title":"hi json"}, \
+                    {"co":0.6, "title":"json is ..."} \
+                ]';
+    console.log(data)
+    
+    eval('var x = 30;');
+    console.log(x);
+    eval("var ar = " + data + ";");
+    console.log(ar[0].co);
+</script>
+</html>

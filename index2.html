@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //////////////////// 11 강 ////////////////////
+    var data = JSON.parse('{"id":1, "title":"aaa"}');
+    console.log(data)
+
+    var data2 = {id:2, title:"bbb"};
+    var json = JSON.stringify(data2)
+    console.log(json);
+    var j = JSON.parse(json);
+    console.log(j)
+    
+    //////////////////// 12 강 ////////////////////
+    var x = 3;
+    var y = 3; // 똑같은 값이면 새로 만들지 않는다.
+    var z = new Number(3);
+
+    document.write(x == y); // 값 연산
+    console.log(x === y); // 주소 비교
+    console.log(x === z);
+    document.writeln();
+    document.write(3.5 - "2"+'<br />');
+
+    console.log(5 < 3 + 4);
+    console.log("32" > "4");
+
+    //////////////////// 13 강 ////////////////////
+    var ar = ['hello', 'hi', 'greating'];
+    // for(var i=0; i<ar.length; i++)
+    // document.writeln(ar[i]+'<br />');
+    for(var index in ar)
+    document.writeln(ar[index]+'<br />');
+
+    var ob = {id:1, title:'hello', writeId:'newlec'};
+    for (var i in ob) // key 값을 순회
+    document.write(ob[i] +'<br />');
+
+    //////////////////// 14 강 ////////////////////
+    // 함수 1
+    var add = new Function("x, y","return x+y;");
+    console.log('add : ' + add(3, 4));
+
+    // 함수 2
+    var add1 = function(x, y){
+        return x + y
+    }
+    console.log('add2 : ' + add2(3, 6));
+
+    // 함수 3
+    function add2(x, y){
+        return x + y;
+    }
+    console.log('add2 : ' + add2(4, 6));
+
+    //////////////////// 15 강 ////////////////////
+    function add3(x, y){
+        console.log(typeof arguments[5]);
+        return x + y;
+    }
+    console.log(add3(6, 5, 4, 3, 2, 'hello'));
+    // 매개변수는 참조하는 변수일뿐
+</script>
+</html>
