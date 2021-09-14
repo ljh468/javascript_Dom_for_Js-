@@ -7,9 +7,107 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- //////////////////// 19 강 //////////////////// -->
+    <script>
+        function printResult(){
+            var x = prompt('x의 값을 입력하세요.', 0);
+            var y = prompt('y의 값을 입력하세요.', 0);
+            // alert(typeof (x+y)) // 문자열로 입력됨
+            // alert(parseInt(x)+parseInt(y));
+            // btnPrint.value = parseInt(x)+parseInt(y);
+            span1.innerText = parseInt(x)+parseInt(y);
+        }
+        function printResult2(){
+            var x = prompt('x의 값을 입력하세요.', 0);
+            var y = prompt('y의 값을 입력하세요.', 0);
+            btnPrint.value = parseInt(x)+parseInt(y);
+        }
+
+        function typetext(){
+            btntype.type='text';
+        }
+
+        function init(){
+        btnPrint.onclick = printResult2;
+        }
+        window.onload = init;
+    </script>
+
+    <input type='button' value='출력' onclick="typetext();" id="btntype"/><br>
+    <span onclick="alert('hello')" id="span1">스팬입니다.</span>
     
+    <!-- //////////////////// 20 강 //////////////////// -->
+    <input type='button' value='클릭' id="btnPrint"/><br>
+
+
 </body>
 <script>
     //////////////////// 16 강 ////////////////////
+    console.log(a) // undefined
+    var a = 1; // 변수의 선언은 실행되기전에 만들어진다.
+
+    // console.log(b)
+    b = 1 // window객체의 전역변수로 선언됨
+    
+    var a = 1;
+    var a = 2;
+    console.log(a)
+
+    {
+        var c = 1;
+    }
+    console.log(c)
+
+    // function영역만이 지역변수 선언가능
+    function f1(){
+        var d = 1; // 지역변수 선언
+    }
+    f1(); // console.log(d); // 존재하지않음
+    // console.log(f1(d))
+
+    function ff1(){
+        var e = 1;
+        f2();
+        function f2(){
+            var e = 2;
+            f3();
+            function f3(){
+                // var e = 3;
+                e = 3; // ff1 함수에 정의된 e를 사용
+                console.log(e)
+            }
+        }
+    }
+    ff1();
+    // console.log(e) (현재 e는 ff1함수의 지역변수로 사용되었기때문에 오류)
+
+    //////////////////// 17 강 ////////////////////
+    function ff(){
+        var a = 1; // 지역변수
+        
+        return function ff2(){ // 클로져 
+                    return a; // (a는 사라지지 않고 자원이묶임 )
+                }
+    }
+    var f = ff();
+    var a = f();
+    console.log('seoul: ', a)
+
+    //////////////////// 18 강 ////////////////////
+    // var x = prompt('x의 값을 입력하세요.', 0);
+    // var y = prompt('y의 값을 입력하세요.', 0);
+    // alert(typeof (x+y)) // 문자열로 입력됨
+    // alert(parseInt(x)+parseInt(y))
+
+    var x = parseInt("12abc"); // return 12
+    console.log('parseInt : ' + x);
+
+    // var answer = confirm('정말로 삭제하실 생각입니까?');
+    // if(answer)
+        // alert('삭제되었습니다.')
+    
+    
+    
+
 </script>
 </html>

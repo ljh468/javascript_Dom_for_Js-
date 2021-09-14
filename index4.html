@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<script>
+    // HTML태그가 DOM 객체로 완성이 된이후 (이미지등은 고려하지않음)
+    window.addEventListener('DOMContentLoaded', function() {
+        alert('DOMContentLoaded');
+    });
+
+    // 브라우저에서 DOM이 완성된 시점. DOM트리 생성 직후이므로 window.onload보다 빠름
+    // Jquery 문법
+    $(document).ready(function(){
+        alert('$(document).ready');
+    });
+    
+    $(function(){
+        alert('$(function()');
+    });
+    
+    // 해당 페이지의 모든 외부 리소스, 이미지 등이 로드 된 후에 처리
+    $(window).on("load",function() {
+        alert('$(window).on("load",function');
+    });
+
+</script>
+<body>
+    
+</body>
+</html>
