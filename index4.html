@@ -7,29 +7,58 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
-<script>
-    // HTML태그가 DOM 객체로 완성이 된이후 (이미지등은 고려하지않음)
-    window.addEventListener('DOMContentLoaded', function() {
-        alert('DOMContentLoaded');
-    });
+<script src="test.js"></script> 
+<script src="index.js">
+    // // HTML태그가 DOM 객체로 완성이 된이후 (이미지등은 고려하지않음)
+    // window.addEventListener('DOMContentLoaded', function() {
+    //     alert('DOMContentLoaded');
+    // });
 
-    // 브라우저에서 DOM이 완성된 시점. DOM트리 생성 직후이므로 window.onload보다 빠름
-    // Jquery 문법
-    $(document).ready(function(){
-        alert('$(document).ready');
-    });
+    // // 브라우저에서 DOM이 완성된 시점. DOM트리 생성 직후이므로 window.onload보다 빠름
+    // // Jquery 문법
+    // $(document).ready(function(){
+    //     alert('$(document).ready');
+    // });
     
-    $(function(){
-        alert('$(function()');
-    });
+    // $(function(){
+    //     alert('$(function()');
+    // });
     
-    // 해당 페이지의 모든 외부 리소스, 이미지 등이 로드 된 후에 처리
-    $(window).on("load",function() {
-        alert('$(window).on("load",function');
-    });
+    // // 해당 페이지의 모든 외부 리소스, 이미지 등이 로드 된 후에 처리
+    // $(window).on("load",function() {
+    //     alert('$(window).on("load",function');
+    // });
+
+    //////////////////// 21 강 ////////////////////
+    // function printResult(){
+    //     var btnPrint = document.getElementById("btn-print");
+    //     var x = prompt('x의 값을 입력하세요.', 0);
+    //     var y = prompt('y의 값을 입력하세요.', 0);
+    //     btnPrint.value = parseInt(x)+parseInt(y);
+    //     }
+
+    // function init(){
+    //     var btnPrint = document.getElementById("btn-print");
+    //     btnPrint.onclick = printResult;
+    // }
+    // window.onload = init;
+
+    //////////////////// 22 강 ////////////////////
+    // window.onload = function(){
+    //     var btnPrint = document.getElementById("btn-print");
+
+    //     var add = function(){
+    //         return x + y;
+    //     };
+    //     btnPrint.onclick = function(){
+    //         var x = prompt('x의 값을 입력하세요.', 0);
+    //         var y = prompt('y의 값을 입력하세요.', 0);
+    //         btnPrint.value = parseInt(x)+parseInt(y);
+    //     };
+    // }
 
 </script>
 <body>
-    
+    <input type='button' value='클릭' id="btn-print"/><br>
 </body>
 </html>
