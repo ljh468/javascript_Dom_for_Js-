@@ -8,6 +8,53 @@
     <script src="javascript1-dom.js"></script>
 </head>
 <body>
+    <!-- //////////////////// 28, 29, 30 강 //////////////////// -->
+    <section id="section5">
+        <h1>Ex5 : 엘리먼트 노드의 속성 변경</h1>
+        <div class="box">
+            <input class="src-input" list="img-list"/>
+            <datalist id="img-list">
+                <option value="img1.jpg">img1</option>
+                <option value="img2.jpg">img2</option>
+                <option value="img3.jpg">img2</option>
+            </datalist>
+            <select class="img-select">
+                <option value="img1.jpg">img1</option>
+                <option value="img2.jpg">img2</option>
+                <option value="img3.jpg">img2</option>
+            </select>
+            <input class="change-button" type="button" value="변경하기"/>
+        </div>
+        <div>
+            <img class="img" src="images/img1.jpg"/>
+        </div>
+    </section>
+
+    <hr />
+
+    <!--//////////////////// 27 강 //////////////////// -->
+    <section id="section4">
+        <h1>Ex4 : childeNodes를 이용한 노드 선택</h1>
+        <div class="box">
+            <input />
+            <input /> <!-- 빈공백도 노드임 -->
+        </div>
+    </section>
+
+    <hr />
+    <!--//////////////////// 26 강 //////////////////// -->
+    <section id="section3">
+        <h1>Ex3 : Selectors API Level1</h1>
+        <div>
+            <input class="txt-x" name = "x" type="text" value='0' dir="rtl"/>
+            +
+            <input class="txt-y" name = "y" type="text" value='0' dir="rtl"/>
+            <input class="btn-add" type="button" value="=" />
+            <input class="btn-sum" type="text" value='0' readonly dir="rtl"/>
+        </div>
+    </section>
+    
+    <hr />
     <!--//////////////////// 24, 25 강 //////////////////// -->
     <section id="section2">
         <h1>Ex2 : 엘리먼트 선택방법 개선하기</h1>
@@ -19,6 +66,7 @@
             <input class="btn-sum" type="text" value='0' readonly dir="rtl"/>
         </div>
     </section>
+
     <hr />
     <section>
         <h1>Ex1 : 계산기 프로그램</h1>
