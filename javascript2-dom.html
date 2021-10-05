@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript2-dom.js"></script>
+</head>
+<body>
+    <!-- //////////////////// 34 강 //////////////////// -->
+    <section id="section7">
+        <h1>Ex7-노드 복제와 템플릿 태그</h1>
+        <div>
+            <input type="button" class="clone-button" value="복제" />
+            <input type="button" class="template-button" value="템플릿 복제" />
+        </div>
+        
+        <template>
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+
+        <table border="1" class="notice-list">
+            <thead>
+                <tr>
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>작성일</td>
+                    <td>작성자</td>
+                    <td>조회수</td>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <!-- <tr>
+                    <td>1</td>
+                    <td><a href="1">자바스크립트란..</a></td>
+                    <td>2021-10-05</td>
+                    <td>hoon</td>
+                    <td>2</td>
+                </tr> -->
+            </tbody>
+
+        </table>
+    </section>
+    <hr />
+
+    <!-- //////////////////// 32, 33 강 //////////////////// -->
+    <section id="section6">
+        <h1>Ex6-노드조작: 메뉴추가(createTextNode, Element)</h1>
+        <div>
+            <input class="title-input" name="title" />
+            <input type="button" class="add-button" value="추가" />
+            <input type="button" class="del-button" value="삭제" />
+        </div>
+
+        <ui class="menu-list">
+            <li><a href="">aaa</a></li>
+            <li><a href="">bbb</a></li>
+            <li><a href="">cccc</a></li>
+        </ui>
+    </section>
+    <hr />
+</body>
+</html>

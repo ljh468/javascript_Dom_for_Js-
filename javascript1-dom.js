@@ -1,15 +1,20 @@
 //////////////////// 28, 29, 30 강 ////////////////////
-// Ex5 : 엘리먼트 노드의 속성 변경
+// Ex5 : 엘리먼트 노드의 속성 & CSS 속성 변경
 window.addEventListener("load", function(){
     var section5 = document.querySelector("#section5");
     var srcInput = section5.querySelector(".src-input");
     var imgSelect = section5.querySelector(".img-select")
     var changeButton = section5.querySelector(".change-button");
     var img = section5.querySelector("img");
+    var colorInput = section5.querySelector(".color-input");
     
     changeButton.onclick = function(){
         img.src = "images/"+srcInput.value;
         // img.src = "images/"+imgSelect.value;
+
+        // img.style["border-color"] = colorInput.value;
+        img.style.borderColor = colorInput.value;
+        console.log(img.className)
     };
 });
 
