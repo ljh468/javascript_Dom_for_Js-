@@ -1,3 +1,43 @@
+//////////////////// 35 강 ////////////////////
+//Ex8-노드 삽입과 바꾸기
+window.addEventListener("load", function(){
+
+    var section = document.querySelector("#section8");
+    
+    var noticeList =section.querySelector(".notice-list"); 
+    var tbodyNode = noticeList.querySelector("tbody");
+    var upButton = section.querySelector(".up-button");
+    var downButton = section.querySelector(".down-button");
+
+    var currentNode = tbodyNode.firstElementChild;//.children[0];
+
+    downButton.onclick = function(){
+        var nextNode = currentNode.nextElementSibling;
+        
+        if(nextNode == null){
+            alert("더이상 이동할 수 없습니다.");
+            return;
+        }
+        // tbodyNode.removeChild(nextNode);
+        // tbodyNode.insertBefore(nextNode, currentNode);
+        currentNode.insertAdjacentElement("beforebegin", nextNode);
+
+    };
+
+    upButton.onclick = function(){
+       var prevNode = currentNode.previousElementSibling;
+
+       if(prevNode == null){
+        alert("더이상 이동할 수 없습니다.");
+        return;
+        }
+        // tbodyNode.removeChild(currentNode);
+        // tbodyNode.insertBefore(currentNode, prevNode);
+        currentNode.insertAdjacentElement("afterend", prevNode);
+    };
+
+});
+
 //////////////////// 34 강 ////////////////////
 // Ex7-노드 복제와 템플릿 태그
 window.addEventListener("load", function(){
